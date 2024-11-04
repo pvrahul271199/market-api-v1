@@ -1,0 +1,132 @@
+{
+  "type": "object",
+  "properties": {
+    "indexId": {
+      "type": "string",
+      "description": "Unique identifier for the index"
+    },
+    "indexName": {
+      "type": "string",
+      "description": "Name of the index"
+    },
+    "percentChange": {
+      "type": "number",
+      "description": "Percentage change in the index value"
+    },
+    "r1Week": {
+      "type": "number",
+      "description": "1-week return percentage"
+    },
+    "r1Month": {
+      "type": "number",
+      "description": "1-month return percentage"
+    },
+    "r3Month": {
+      "type": "number",
+      "description": "3-month return percentage"
+    },
+    "r1Year": {
+      "type": "number",
+      "description": "1-year return percentage"
+    },
+    "r3Year": {
+      "type": "number",
+      "description": "3-year return percentage"
+    },
+    "r5Year": {
+      "type": "number",
+      "description": "5-year return percentage"
+    },
+    "r6Month": {
+      "type": "number",
+      "description": "6-month return percentage"
+    },
+    "change1Week": {
+      "type": "number",
+      "description": "Change in index value over the last week"
+    },
+    "change1Month": {
+      "type": "number",
+      "description": "Change in index value over the last month"
+    },
+    "change3Month": {
+      "type": "number",
+      "description": "Change in index value over the last 3 months"
+    },
+    "change6Month": {
+      "type": "number",
+      "description": "Change in index value over the last 6 months"
+    },
+    "change1Year": {
+      "type": "number",
+      "description": "Change in index value over the last year"
+    },
+    "change3Year": {
+      "type": "number",
+      "description": "Change in index value over the last 3 years"
+    },
+    "change5Year": {
+      "type": "number",
+      "description": "Change in index value over the last 5 years"
+    },
+    "exchange": {
+      "type": "string",
+      "description": "Exchange on which the index is listed"
+    },
+    "symbol": {
+      "type": "string",
+      "description": "Symbol of the index"
+    },
+    "lastTradedPrice": {
+      "type": "number",
+      "description": "Last traded price of the index"
+    },
+    "netChange": {
+      "type": "number",
+      "description": "Net change in the index value"
+    },
+    "advances": {
+      "type": "number",
+      "description": "Number of advances in the index"
+    },
+    "advancesPerChange": {
+      "type": "number",
+      "description": "Advances per change in the index"
+    },
+    "declines": {
+      "type": "number",
+      "description": "Number of declines in the index"
+    },
+    "declinesPerChange": {
+      "type": "number",
+      "description": "Declines per change in the index"
+    }
+  },
+  "required": [
+    "indexId",
+    "indexName",
+    "percentChange",
+    "r1Week",
+    "r1Month",
+    "r3Month",
+    "r1Year",
+    "r3Year",
+    "r5Year",
+    "r6Month",
+    "change1Week",
+    "change1Month",
+    "change3Month",
+    "change6Month",
+    "change1Year",
+    "change3Year",
+    "change5Year",
+    "exchange",
+    "symbol",
+    "lastTradedPrice",
+    "netChange",
+    "advances",
+    "advancesPerChange",
+    "declines",
+    "declinesPerChange"
+  ]
+}

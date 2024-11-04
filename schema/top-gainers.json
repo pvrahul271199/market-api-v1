@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "properties": {
+    "assetName": {
+      "type": "string",
+      "description": "Name of the asset"
+    },
+    "assetSymbol": {
+      "type": "string",
+      "description": "Symbol of the asset"
+    },
+    "currentPrice": {
+      "type": "string",
+      "description": "Last traded price of the asset"
+    },
+    "percentChange": {
+      "type": "string",
+      "description": "Percentage change in price"
+    },
+    "volume": {
+      "type": "string",
+      "description": "Volume of the asset traded"
+    },
+    "marketCap": {
+      "type": "string",
+      "description": "Market capitalization in Rs Cr"
+    },
+    "returns": {
+      "type": "object",
+      "properties": {
+        "1W": {
+          "type": "string",
+          "description": "1-week return percentage"
+        },
+        "1M": {
+          "type": "string",
+          "description": "1-month return percentage"
+        },
+        "6M": {
+          "type": "string",
+          "description": "6-month return percentage"
+        },
+        "1Y": {
+          "type": "string",
+          "description": "1-year return percentage"
+        },
+        "3Y": {
+          "type": "string",
+          "description": "3-year return percentage"
+        },
+        "YTD": {
+          "type": "string",
+          "description": "Year-to-date return percentage"
+        }
+      },
+      "required": ["1W", "1M", "6M", "1Y", "3Y", "YTD"]
+    }
+  },
+  "required": ["assetName", "assetSymbol", "currentPrice", "percentChange", "volume", "marketCap", "returns"]
+}
