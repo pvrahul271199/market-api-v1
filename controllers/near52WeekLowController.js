@@ -1,4 +1,4 @@
-const { getNear52WeekLowData } = require('../services/Near52WeekLow');
+const { getNear52WeekLowData } = require('../services/near52WeekLow');
 
 async function fetchNear52WeekLow(req, res) {
     try {

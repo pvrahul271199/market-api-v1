@@ -1,4 +1,4 @@
-const { getVolumeShockersData } = require('../services/VolumeShockers');
+const { getVolumeShockersData } = require('../services/volumeShockers');
 
 async function fetchVolumeShockers(req, res) {
     try {

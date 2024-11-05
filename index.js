@@ -7,7 +7,7 @@ const newfiftyTwoWeekHighRoute = require('./routes/new52WeekHighRoutes'); // Imp
 const newfiftyTwoWeekLowRoute = require('./routes/new52WeekLowRoutes'); // Import the new 52-week high route
 const near52WeekHighRoute = require('./routes/near52WeekHighRoutes'); // Import the new 52-week high route
 const near52WeekLowRoute = require('./routes/near52WeekLowRoutes'); // Import the new 52-week high route
-const volumeShockersRoute = require('./routes/VolumeShockersRoutes'); // Import the volume shockers route
+const volumeShockersRoute = require('./routes/volumeShockersRoutes'); // Import the volume shockers route
 const nseIndicesRoute = require('./routes/nseIndices'); // Import the volume shockers route
 const bseIndicesRoute = require('./routes/bseIndices'); // Import the volume shockers route
 

@@ -1,5 +1,5 @@
 const express = require('express');
-const { fetchNew52WeekLow } = require('../controllers/New52WeekLowController');
+const { fetchNew52WeekLow } = require('../controllers/new52WeekLowController');
 
 const router = express.Router();
 

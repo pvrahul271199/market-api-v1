@@ -1,5 +1,5 @@
 const express = require('express');
-const { fetchVolumeShockers } = require('../controllers/VolumeShockersController');
+const { fetchVolumeShockers } = require('../controllers/volumeShockersController');
 
 const router = express.Router();
 
