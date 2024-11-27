@@ -9,7 +9,8 @@ const near52WeekHighRoute = require('./routes/near52WeekHighRoutes'); // Import 
 const near52WeekLowRoute = require('./routes/near52WeekLowRoutes'); // Import the new 52-week high route
 const volumeShockersRoute = require('./routes/volumeShockersRoutes'); // Import the volume shockers route
 const nseIndicesRoute = require('./routes/nseIndices'); // Import the volume shockers route
-const bseIndicesRoute = require('./routes/bseIndices'); // Import the volume shockers route
+const bseIndicesRoute = require('./routes/bseIndices');
+const getStockDetailsRoute = require('./routes/getStockDetails');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -35,6 +36,7 @@ app.use('/api/near-52-week-low', near52WeekLowRoute); // Add this line
 app.use('/api/volume-shockers', volumeShockersRoute); // Add this line
 app.use('/api/nse-indices', nseIndicesRoute);
 app.use('/api/bse-indices', bseIndicesRoute);
+app.use('/api/quote-equity/:symbol', getStockDetailsRoute);
 app.use('/ping', () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
