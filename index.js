@@ -36,9 +36,12 @@ app.use('/api/near-52-week-low', near52WeekLowRoute); // Add this line
 app.use('/api/volume-shockers', volumeShockersRoute); // Add this line
 app.use('/api/nse-indices', nseIndicesRoute);
 app.use('/api/bse-indices', bseIndicesRoute);
-app.use('/api/quote-equity/:symbol', getStockDetailsRoute);
-app.use('/ping', () => {
+// app.use('/api/quote-equity/:symbol', getStockDetailsRoute);
+app.get('/ping', () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+});
+app.get('/', () => {
+    console.log(`v1 Server is running on http://localhost:${PORT}`);
 });
 
 app.listen(PORT, () => {
