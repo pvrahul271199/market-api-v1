@@ -35,11 +35,15 @@ app.use('/api/near-52-week-low', near52WeekLowRoute); // Add this line
 app.use('/api/volume-shockers', volumeShockersRoute); // Add this line
 app.use('/api/nse-indices', nseIndicesRoute);
 app.use('/api/bse-indices', bseIndicesRoute);
-app.get('/ping', () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+
+app.get('/ping', (req, res) => {
+    console.log('Ping received');
+    res.send('Pong');
 });
-app.get('/', () => {
-    console.log(`v1 Server is running on http://localhost:${PORT}`);
+
+app.get('/', (req, res) => {
+    console.log('Root endpoint hit');
+    res.send('v1 Server is running');
 });
 
 app.listen(PORT, () => {
