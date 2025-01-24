@@ -2,12 +2,11 @@ name: GitHub Actions Demo
 
 on:
   schedule:
-    - cron: '* * * * *' # This runs the workflow daily at midnight UTC
+    - cron: '* * * * *' 
 
 jobs:
-  Explore-GitHub-Actions:
+  report:
     runs-on: ubuntu-latest
-
     steps:
     - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - name: Check out repository code
