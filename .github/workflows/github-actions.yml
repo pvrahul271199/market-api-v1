@@ -2,44 +2,18 @@ name: GitHub Actions Demo
 
 on:
   schedule:
-    - cron: '* * * * *' # This runs the workflow every minute for demonstration purposes
+    - cron: '* * * * *' # This runs the workflow daily at midnight UTC
 
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up run counter
-      id: run_counter
-      run: |
-        # File to store the run count
-        COUNTER_FILE=".github_run_count.txt"
-        
-        # Check if the file exists, if not create it with a count of 0
-        if [ ! -f "$COUNTER_FILE" ]; then
-          echo 0 > "$COUNTER_FILE"
-        fi
-        
-        # Read the current count, increment it, and save back
-        RUN_COUNT=$(cat "$COUNTER_FILE")
-        NEW_RUN_COUNT=$((RUN_COUNT + 1))
-        echo "$NEW_RUN_COUNT" > "$COUNTER_FILE"
-        
-        # Output the new run count for later steps
-        echo "::set-output name=run_count::$NEW_RUN_COUNT"
-
-    - name: Display run details
-      run: |
-        echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-        echo "🕒 Current UTC time: $(date -u)"
-        echo "🔢 This job has run ${{ steps.run_counter.outputs.run_count }} times."
-
+    - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
     - name: Check out repository code
       uses: actions/checkout@v2
-
+    - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
     - name: List files in the repository
       run: |
         ls ${{ github.workspace }}
-
-    - name: Show job status
-      run: echo "🍏 This job's status is ${{ job.status }}."
+    - run: echo "🍏 This job's status is ${{ job.status }}."
